@@ -1,0 +1,63 @@
+.lang-switcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.lang-switcher__trigger {
+  border-radius: 10px;
+  background-color: $white;
+  box-shadow: 0 1px 5px 0 rgb(0 26 66 / 15%);
+  gap: 10px;
+  cursor: pointer;
+}
+
+#lang-switcher-trigger {
+  display: none;
+
+  &:checked {
+    @extend %lang-switcher-is-active;
+  }
+}
+
+.lang-switcher__flag {
+  $flag-size: 26px;
+
+  border-radius: 50%;
+  width: $flag-size;
+  height: $flag-size;
+}
+
+.lang-switcher__close {
+  background-color: transparent;
+  padding: 0;
+}
+
+.lang-switcher-select {
+  position: absolute;
+  width: 208px;
+  padding: 10px;
+  top: 120%;
+  right: 44px;
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 1px 5px 0 rgb(0 26 66 / 15%);
+  visibility: hidden;
+
+  %lang-switcher-is-active + & {
+    visibility: visible;
+  }
+}
+
+.lang-switcher-select__list {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lang-switcher-select__button {
+  gap: 10px;
+  padding: 0;
+}

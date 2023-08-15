@@ -1,0 +1,19 @@
+.notification {
+  @include container;
+
+  padding: 21px 25px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $light-gray;
+
+  @include media-breakpoint-min(tablet) {
+    gap: 25px;
+    padding: 21px 50px;
+  }
+}
+
+.notification__text {
+  font-size: clamp(12px, 3vw, 16px);
+}

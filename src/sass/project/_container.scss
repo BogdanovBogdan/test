@@ -1,0 +1,15 @@
+@mixin container {
+  width: 100%;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+
+  @include media-breakpoint-min(tablet) {
+    padding-left: 100px !important;
+    padding-right: 100px !important;
+  }
+
+  @include media-breakpoint-min(desktop) {
+    padding-left: calc((100vw - 1070px) / 2) !important;
+    padding-right: calc((100vw - 1070px) / 2) !important;
+  }
+}

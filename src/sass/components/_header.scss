@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__navigation {
+  @include container;
+
+  display: flex;
+  padding: 14px 25px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.header__list {
+  display: none;
+
+  @include media-breakpoint-min(desktop) {
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.header__item {
+  padding: 8px 16px;
+}
+
+.header__button {
+  min-width: 110px;
+}

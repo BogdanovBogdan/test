@@ -1,5 +1,5 @@
-$screen-tablet-min: 768px;
-$screen-desktop-min: 1024px;
+$screen-tablet-min: 640px;
+$screen-desktop-min: 1280px;
 $media-queries-min: (
   phone: 'screen',
   tablet: 'screen and (min-width: #{$screen-tablet-min})',
@@ -12,8 +12,8 @@ $media-queries-min: (
   }
 }
 
-$screen-mobile-max: 767px;
-$screen-tablet-max: 1023px;
+$screen-mobile-max: #{$screen-tablet-min - 1};
+$screen-tablet-max: #{$screen-desktop-min - 1};
 $media-queries-max: (
   phone: 'screen and (max-width: #{$screen-mobile-max})',
   tablet: 'screen and (max-width: #{$screen-tablet-max})',
