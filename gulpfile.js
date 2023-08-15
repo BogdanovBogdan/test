@@ -16,7 +16,7 @@ const devDir = './src/';
 
 const htmlPath = './src/index.html';
 const cssPath = './src/css/*.css';
-const jsPath = './src/js/**/script.js';
+const jsPath = './src/js/**/*.js';
 const sassToCssPath = './src/sass/**/*.scss';
 const copySrcPaths = [
   './src/**/*.*',
@@ -43,10 +43,10 @@ const build = (done) => {
         })
       )
       .pipe(cleanCss())
-      .pipe(rename({ suffix: '.min'}))
-      .pipe(gulp.dest(buildDir + '/css'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(gulp.dest(buildDir + '/css'));
   }
-  
+
   function html() {
     return gulp
       .src(htmlPath)
